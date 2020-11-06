@@ -1,0 +1,77 @@
+/* 清除默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 标题样式 */
+.title {
+  width: 100%;
+  text-align: center;
+}
+
+/* 设置内容主体样式 flex布局 简单居中 */
+.content-wrapper {
+  width: 50%;
+  min-width: 500px;
+  height: 260px;
+  margin: 6vh auto 0;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(196, 196, 196);
+  box-shadow: 0px 0px 3px 0px #fff;
+  background-color: #f0f0f0;
+  transition: all 0.2s;
+}
+
+/* 鼠标悬浮后的样式 */
+.content-wrapper:hover {
+  background-color: #e7e7e7ee;
+  box-shadow: 3px 3px 8px 0px rgba(153, 153, 153, 0.52);
+}
+
+/* 文字样式 */
+.text {
+  margin: 36px auto 36px;
+  font-size: 24px;
+}
+
+/* 请求文字样式 */
+#text {
+  transition: all 0.3s;
+}
+
+/* 按钮wrapper */
+.btn-wrapper {
+  margin-top: 16px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 按钮样式 */
+button {
+  width: 120px;
+  height: 36px;
+  color: white;
+  outline: none;
+  border-radius: 6px;
+  transition: all 0.6s;
+  user-select: none;
+  border: 1px solid #fff;
+  background-color: #777;
+}
+button:hover {
+  color: #333;
+  cursor: pointer;
+  border-radius: 18px;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+
+/* 改变样式按钮宽度 */
+#styleBtn {
+  width: 260px;
+}
