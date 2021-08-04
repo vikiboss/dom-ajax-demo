@@ -63,6 +63,7 @@ button {
   border: 1px solid #fff;
   background-color: #777;
 }
+
 button:hover {
   color: #333;
   cursor: pointer;
