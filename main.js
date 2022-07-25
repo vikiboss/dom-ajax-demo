@@ -65,7 +65,7 @@ const getDataViaJquery = async () => {
 
 const getDataViaAxios = async () => {
   setText("Axios请求中...");
-  const response = await axios.get("v1.hitokoto.cn	");
+  const response = await axios.get(api);
   const text = response.data;
   setText(text);
 };
