@@ -5,6 +5,8 @@ let fetchBtn = document.getElementById("fetchBtn");
 let axiosBtn = document.getElementById("axiosBtn");
 let jqueryBtn = document.getElementById("jqueryBtn");
 
+const api = "https://v1.hitokoto.cn/?encode=text";
+
 // function getRandom(min, max) {
 //   return Math.floor(Math.random() * (max - min + 1) + min);
 // }
@@ -35,7 +37,7 @@ const setText = (text) => (textDiv.innerText = text);
 const getDataViaXHR = () => {
   setText("XHR请求中...");
   let xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.imjad.cn/hitokoto");
+  xhr.open("GET", api);
   xhr.onreadystatechange = () => {
     if (xhr.readyState === xhr.DONE) {
       if (xhr.status === 200) {
@@ -50,27 +52,27 @@ const getDataViaXHR = () => {
 
 const getDataViaJquery = async () => {
   setText("Jquery请求中...");
-  const data = await $.get("https://api.imjad.cn/hitokoto");
+  const data = await $.get(api);
   setText(data);
 };
 
 // const _getDataViaJquery = () => {
 //   setText("Jquery请求中...");
-//   $.get("https://api.imjad.cn/hitokoto").then((response) => {
+//   $.get(api).then((response) => {
 //     setText(response);
 //   });
 // };
 
 const getDataViaAxios = async () => {
   setText("Axios请求中...");
-  const response = await axios.get("https://api.imjad.cn/hitokoto");
+  const response = await axios.get("v1.hitokoto.cn	");
   const text = response.data;
   setText(text);
 };
 
 // const _getDataViaAxios = () => {
 //   setText("Axios请求中...");
-//   axios.get("https://api.imjad.cn/hitokoto").then((response) => {
+//   axios.get(api).then((response) => {
 //     const text = response.data;
 //     setText(text);
 //   });
@@ -78,14 +80,14 @@ const getDataViaAxios = async () => {
 
 const getDataViaFetch = async () => {
   setText("Fetch请求中...");
-  const response = await fetch("https://api.imjad.cn/hitokoto");
+  const response = await fetch(api);
   const text = await response.text();
   setText(text);
 };
 
 // const _getDataViaFetch = () => {
 //   setText("Fetch请求中...");
-//   fetch("https://api.imjad.cn/hitokoto").then((response) => {
+//   fetch(api).then((response) => {
 //     const text = response.text();
 //     setText(text);
 //   });
